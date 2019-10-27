@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.map.MapFragment" android:orientation="vertical" android:background="#F5F7F6">
+
+    <android.support.v7.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:background="@android:color/white" android:elevation="1dp"
+                    android:translationZ="1dp">
+
+        <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                     android:src="@drawable/ic_chevron_left_24dp" style="@style/Widget.AppCompat.ActionButton.CloseMode"
+                     android:id="@+id/map_back_button" android:contentDescription="@string/content_description_button_back"/>
+
+    </android.support.v7.widget.CardView>
+
+    <android.support.design.widget.CoordinatorLayout android:layout_width="match_parent" android:layout_height="match_parent">
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/map_map"
+                  class="com.here.android.mpa.mapping.SupportMapFragment"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"/>
+
+        <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                    android:orientation="vertical"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="#F5F7F6"
+                                                    app:behavior_hideable="true" android:id="@+id/map_action_details"
+                                                    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="vertical">
+
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="200dp">
+
+                    <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                               android:id="@+id/action_details_image" android:scaleType="centerCrop"/>
+
+                    <TextView android:layout_width="match_parent" android:layout_height="40dp"
+                              android:id="@+id/action_details_title" android:textAlignment="center"
+                              android:background="#a0ffffff" android:layout_marginBottom="0dp"
+                              android:layout_alignParentBottom="true" android:textColor="@android:color/black"/>
+
+                </RelativeLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                              android:gravity="center" android:elevation="1dp" android:translationZ="1dp"
+                              android:background="@android:color/white" android:id="@+id/action_details_more_button">
+
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                               android:src="@drawable/ic_expand_less_24dp" android:id="@+id/action_details_more"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:gravity="center" android:id="@+id/action_details_loader" android:visibility="gone">
+
+                    <ProgressBar android:layout_width="wrap_content" android:layout_height="wrap_content"
+                    android:layout_margin="24dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:id="@+id/action_details_content" android:orientation="vertical">
+
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                  android:orientation="vertical" android:padding="8dp">
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:paddingStart="24dp" android:paddingEnd="24dp"
+                                      android:layout_marginBottom="16dp" android:id="@+id/action_details_information_layout">
+
+                            <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                                       android:src="@drawable/info"/>
+
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:id="@+id/action_details_information" android:textSize="14sp"
+                                      android:textColor="@android:color/black" android:padding="4dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:paddingStart="24dp" android:paddingEnd="24dp"
+                                      android:layout_marginBottom="16dp">
+
+                            <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                                       android:src="@drawable/action_details_ic_location_on_24dp"/>
+
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:id="@+id/action_details_address" android:textSize="14sp"
+                                      android:textColor="@android:color/black" android:padding="4dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:paddingStart="24dp" android:paddingEnd="24dp"
+                                      android:layout_marginBottom="16dp">
+
+                            <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                                       android:src="@drawable/time"/>
+
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:id="@+id/action_details_work_time" android:textSize="14sp"
+                                      android:textColor="@android:color/black" android:padding="4dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:paddingStart="24dp" android:paddingEnd="24dp"
+                                      android:layout_marginBottom="16dp">
+
+                            <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                                       android:src="@drawable/action_details_ic_local_phone_24dp"/>
+
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:id="@+id/action_details_phone" android:textSize="14sp"
+                                      android:textColor="@android:color/black" android:padding="4dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:paddingStart="24dp" android:paddingEnd="24dp"
+                                      android:layout_marginBottom="16dp" android:id="@+id/action_details_site_layout">
+
+                            <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                                       android:src="@drawable/ic_web_24dp"/>
+
+                            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:id="@+id/action_details_site" android:textSize="14sp"
+                                      android:textColor="@android:color/black" android:padding="4dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:paddingStart="24dp" android:paddingEnd="24dp"
+                                      android:layout_marginBottom="16dp" android:id="@+id/action_details_socials_layout">
+
+                            <ImageView android:layout_width="32dp" android:layout_height="32dp"
+                                       android:src="@drawable/ic_group_24dp"/>
+
+                            <LinearLayout android:layout_width="wrap_content" android:orientation="horizontal"
+                                          android:layout_height="wrap_content" android:id="@+id/action_details_socials"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</LinearLayout>

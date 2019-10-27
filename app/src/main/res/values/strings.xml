@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">Holiday</string>
+
+    <string name="change_city_input">Поиск города</string>
+    <string name="interesting_actions_label">Интересные предложения рядом</string>
+    <string name="main_search_hint">Поиск</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="settings_title">Настройки</string>
+    <string name="settings_profile_title">Профиль</string>
+    <string name="settings_profile_default">Войти</string>
+    <string name="settings_city_title">Город</string>
+    <string name="settings_city_default">Определен по геолокации</string>
+    <string name="login_title">Войти</string>
+    <string name="login_hint_login">Логин</string>
+    <string name="login_hint_password">Пароль</string>
+    <string name="login_to_registration">Пройти регистрацию</string>
+    <string name="login_sing_in">Войти</string>
+    <string name="login_or">или</string>
+    <string name="registration_title">Регистрация</string>
+    <string name="registration_hint_name">Имя пользователя</string>
+    <string name="registration_hint_login">Логин</string>
+    <string name="registration_hint_email">Email</string>
+    <string name="registration_hint_phone">Телефон</string>
+    <string name="registration_hint_birthday">Дата рождения</string>
+    <string name="registration_hint_password">Пароль</string>
+    <string name="registration_hint_repeat_password">Повторите пароль</string>
+    <string name="registration_sing_up">Зарегистрироваться</string>
+    <string name="content_description_button_back">Button Back</string>
+    <string name="profile_title">Профиль</string>
+    <string name="profile_label_login">Логин</string>
+    <string name="profile_label_name">Имя пользователя</string>
+    <string name="profile_label_email">Email</string>
+    <string name="profile_label_phone">Телефон</string>
+    <string name="profile_sing_out">Выйти из аккаунта</string>
+    <string name="profile_label_city">Город</string>
+    <string name="profile_city_default">Определен по геолокации</string>
+    <string name="change_city_title">Выбор города</string>
+    <string name="profile_callback_title">Обратная связь</string>
+    <string name="profile_callback_hint">Введите сообщение</string>
+    <string name="profile_callback_button">Отправить</string>
+    <string name="redact_profile_title">Редактирование</string>
+    <string name="secret_title">Подтверждение</string>
+    <string name="secret_title_hint_doing">Введите код отправленный вам на Email</string>
+    <string name="secret_input_hint">Введите код</string>
+    <string name="secret_confirm_button">Подтвердить</string>
+    <string name="secret_repeat">Повторная отправка</string>
+    <string name="no_internet_label">Отсутствует интернет соединение</string>
+    <string name="profile_label_new_password">Пароль</string>
+    <string name="profile_label_new_password_repeat">Повторите пароль</string>
+    <string name="profile_label_old_password">Действующий пароль</string>
+</resources>

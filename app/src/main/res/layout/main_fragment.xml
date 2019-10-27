@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".ui.main.MainFragment" android:background="#F5F7F6">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                  android:orientation="vertical">
+
+        <android.support.v7.widget.CardView android:layout_width="match_parent"
+                                            android:layout_height="wrap_content">
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="vertical">
+
+                <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                                android:background="#f8faf9">
+
+                    <android.support.v7.widget.CardView android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginStart="16dp" android:layout_marginEnd="50dp"
+                                                        android:layout_marginTop="8dp" android:layout_marginBottom="8dp"
+                                                        android:background="@android:color/white" android:id="@+id/main_search">
+
+                        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                   android:src="@drawable/ic_search_24dp" android:layout_margin="4dp"/>
+
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                  android:text="@string/main_search_hint" android:textSize="16sp"
+                                  android:layout_marginStart="32dp" android:layout_marginTop="6dp"/>
+
+                    </android.support.v7.widget.CardView>
+
+                    <ImageButton android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                 style="@style/Widget.AppCompat.ActionButton.CloseMode" android:src="@drawable/ic_menu_24dp"
+                                 android:id="@+id/main_menu_button" android:layout_alignParentEnd="true"
+                                 android:layout_marginEnd="0dp"/>
+
+                </RelativeLayout>
+
+                <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:background="#fcfcfc" android:paddingBottom="8dp"
+                                      android:paddingTop="4dp">
+
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="98dp"
+                                  android:orientation="horizontal" android:id="@+id/main_categories"
+                                  android:paddingStart="4dp" android:paddingEnd="4dp"/>
+
+                </HorizontalScrollView>
+
+                <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                                      android:background="#fcfcfc" android:paddingBottom="4dp"
+                                      android:paddingTop="4dp">
+
+                    <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                                  android:orientation="horizontal" android:id="@+id/main_sub_categories"
+                                  android:visibility="gone"
+                                  android:paddingStart="8dp" android:paddingEnd="8dp">
+
+                        <RelativeLayout android:layout_width="48dp" android:layout_height="48dp">
+
+                            <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                                       android:id="@+id/main_sub_categories_category_image"/>
+
+                            <ImageView android:layout_width="12dp" android:layout_height="12dp"
+                                       android:src="@drawable/ic_clear_24dp" android:layout_alignParentEnd="true"
+                                       android:layout_marginEnd="0dp"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v4.widget.SwipeRefreshLayout android:layout_width="match_parent"
+                                                      android:layout_height="match_parent" android:id="@+id/main_swipe_refresh">
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/main_actions"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/main_floating_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|bottom"
+            android:src="@drawable/ic_location_on_main_24dp"
+            android:layout_marginBottom="32dp" app:backgroundTint="@android:color/white"
+    android:scaleY="1.4" android:scaleX="1.4"/>
+
+</android.support.design.widget.CoordinatorLayout>
